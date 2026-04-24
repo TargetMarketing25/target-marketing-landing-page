@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Target Marketing Academy</title>
-  <meta name="description" content="أكاديمية Target Marketing لتعليم التسويق العملي من الصفر للاحتراف." />
+  <meta name="description" content="أكاديمية Target Marketing لتعليم المهارات الرقمية المطلوبة وتحويلها إلى دخل حقيقي بخطوات عملية." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -13,12 +13,14 @@
 <body>
   <header class="topbar">
     <div class="container nav-wrap">
-      <a class="logo" href="#home">Target Marketing Academy</a>
+      <a class="logo" href="#home" aria-label="Target Marketing Academy">
+        <img src="logo.png" alt="Target Marketing Academy Logo" />
+      </a>
       <button id="menuToggle" class="menu-toggle" aria-label="فتح القائمة">☰</button>
       <nav id="mainNav" class="nav-links">
         <a href="#about">عن الأكاديمية</a>
-        <a href="#benefits">المميزات</a>
-        <a href="#course">تفاصيل الكورس</a>
+        <a href="#courses">الكورسات</a>
+        <a href="#founder">المؤسس</a>
         <a href="#testimonials">آراء الطلاب</a>
         <a href="#faq">الأسئلة الشائعة</a>
       </nav>
@@ -27,121 +29,120 @@
 
   <main>
     <section id="home" class="hero section">
-      <div class="container hero-grid">
-        <div>
-          <span class="badge">ابدأ رحلتك في التسويق دلوقتي</span>
-          <h1>اتعلّم التسويق العملي مع <span>Target Marketing Academy</span></h1>
+      <div class="container hero-grid reveal">
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="founder.png" alt="Tarek Nabil Founder & CEO" />
+        </div>
+        <div class="hero-content">
+          <span class="badge">Premium Learning Experience</span>
+          <h1>حوّل مهاراتك إلى دخل حقيقي مع أكاديمية Target Marketing</h1>
           <p>
-            محتوى عربي مصري واضح، تطبيقات عملية، ومتابعة خطوة بخطوة علشان تنقل مهاراتك
-            في التسويق لمستوى احترافي وتبدأ تحقق نتائج حقيقية.
+            تعلم أقوى المهارات المطلوبة في السوق وابدأ طريقك نحو الحرية المالية بخطوات عملية واضحة.
           </p>
           <div class="hero-cta">
-            <a class="btn btn-gold" href="https://wa.me/201029193804" target="_blank" rel="noopener">تواصل واتساب</a>
-            <a class="btn btn-outline" href="#" aria-label="Google Form Placeholder">سجّل عبر Google Form</a>
+            <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLScYabzwdoiWYawuVqxtZi3GOBC8QgC-c0yEtjKc3VxMzM_c0w/viewform?usp=header" target="_blank" rel="noopener">سجّل الآن</a>
+            <a class="btn btn-outline" href="https://wa.me/201029193804" target="_blank" rel="noopener">تواصل واتساب</a>
           </div>
         </div>
-        <div class="hero-card">
-          <h3>ليه الأكاديمية مختلفة؟</h3>
-          <ul>
-            <li>شرح مبسّط باللهجة المصرية</li>
-            <li>استراتيجيات شغالة في السوق الحقيقي</li>
-            <li>تمارين وواجبات عملية على كل موديول</li>
-            <li>دعم مباشر عشان تتخطى أي تحدي</li>
-          </ul>
-        </div>
+      </div>
+    </section>
+
+    <section class="section stats" aria-label="Trust counters">
+      <div class="container stats-grid reveal">
+        <article class="stat-card">
+          <h3>+500</h3>
+          <p>Students</p>
+        </article>
+        <article class="stat-card">
+          <h3>+8</h3>
+          <p>Skill Categories</p>
+        </article>
+        <article class="stat-card">
+          <h3>+24/7</h3>
+          <p>Support</p>
+        </article>
       </div>
     </section>
 
     <section id="about" class="section">
-      <div class="container">
+      <div class="container reveal">
         <h2>عن الأكاديمية</h2>
         <p>
-          Target Marketing Academy هي منصة تعليمية متخصصة في تدريب الشباب وروّاد الأعمال
-          على التسويق الرقمي بشكل عملي. هدفنا إنك تطلع من الكورس فاهم، مطبّق، وقادر تشتغل
-          على مشاريعك أو مع عملاء بثقة.
+          Target Marketing Academy منصة تعليمية احترافية تساعدك تتعلم مهارات المستقبل وتطبقها عمليًا في مشاريع حقيقية،
+          سواء كنت مبتدئ أو عندك خبرة وعايز تطور دخلك في وقت قياسي.
         </p>
       </div>
     </section>
 
-    <section id="benefits" class="section section-dark">
-      <div class="container">
-        <h2>مميزات الانضمام</h2>
-        <div class="cards-grid">
-          <article class="card">
-            <h3>خطة واضحة</h3>
-            <p>من البداية للنهاية بخطوات عملية بدون تشتت.</p>
-          </article>
-          <article class="card">
-            <h3>تطبيق مباشر</h3>
-            <p>كل درس مرتبط بمهمة عملية عشان تتقن المهارة بسرعة.</p>
-          </article>
-          <article class="card">
-            <h3>دعم ومجتمع</h3>
-            <p>جروب متابعة يجاوب على أسئلتك ويحفزك تكمل.</p>
-          </article>
-          <article class="card">
-            <h3>نتائج قابلة للقياس</h3>
-            <p>هتتعلم إزاي تتابع الأداء وتحسن الحملات بناءً على الأرقام.</p>
-          </article>
+    <section id="courses" class="section section-dark">
+      <div class="container reveal">
+        <h2>الكورسات المتاحة</h2>
+        <div class="courses-grid">
+          <article class="card course-card"><h3>الذكاء الاصطناعي</h3></article>
+          <article class="card course-card"><h3>التجارة الإلكترونية</h3></article>
+          <article class="card course-card"><h3>Dropshipping</h3></article>
+          <article class="card course-card"><h3>Media Buying</h3></article>
+          <article class="card course-card"><h3>تداول Forex &amp; Crypto</h3></article>
+          <article class="card course-card"><h3>كورسات لغات</h3></article>
+          <article class="card course-card"><h3>تنمية بشرية وإدارة الوقت</h3></article>
+          <article class="card course-card"><h3>برمجة بالذكاء الاصطناعي</h3></article>
+        </div>
+        <div class="center-cta">
+          <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLScYabzwdoiWYawuVqxtZi3GOBC8QgC-c0yEtjKc3VxMzM_c0w/viewform?usp=header" target="_blank" rel="noopener">احجز مكانك الآن</a>
         </div>
       </div>
     </section>
 
-    <section id="course" class="section">
-      <div class="container">
-        <h2>تفاصيل الكورس</h2>
-        <div class="course-layout">
-          <div class="course-item">
-            <h3>الموديول 1: الأساسيات</h3>
-            <p>فهم السوق، شخصية العميل، وبناء رسالة تسويقية قوية.</p>
-          </div>
-          <div class="course-item">
-            <h3>الموديول 2: المحتوى والإعلانات</h3>
-            <p>كتابة محتوى بيبيع، وإطلاق حملات ممولة بذكاء.</p>
-          </div>
-          <div class="course-item">
-            <h3>الموديول 3: التحليل والتحسين</h3>
-            <p>قراءة النتائج، تحسين التحويلات، وتوسيع الحملات.</p>
-          </div>
+    <section id="founder" class="section">
+      <div class="container founder-card reveal">
+        <div>
+          <h2>المؤسس</h2>
+          <h3>Tarek Nabil</h3>
+          <p class="founder-role">Founder &amp; CEO</p>
+          <p>
+            بقيادة عملية وخبرة سوق حقيقية، يقود Tarek Nabil رحلة الأكاديمية لتقديم محتوى تدريبي متطور يربط التعلم بالنتائج.
+          </p>
+          <a class="btn btn-outline" href="https://docs.google.com/forms/d/e/1FAIpQLScYabzwdoiWYawuVqxtZi3GOBC8QgC-c0yEtjKc3VxMzM_c0w/viewform?usp=header" target="_blank" rel="noopener">ابدأ رحلتك مع المؤسس</a>
         </div>
+        <img class="founder-image" src="founder.png" alt="Tarek Nabil" />
       </div>
     </section>
 
     <section id="testimonials" class="section section-dark">
-      <div class="container">
+      <div class="container reveal">
         <h2>آراء الطلاب</h2>
-        <div class="cards-grid">
+        <div class="cards-grid testimonials-grid">
           <blockquote class="card quote">
-            "الكورس فرق معايا جدًا، وبدأت أجيب أول عميل بعد شهر واحد." 
-            <cite>- مريم، صاحبة مشروع أونلاين</cite>
+            "Placeholder: تجربة طالب حقق أول دخل أونلاين خلال أسابيع من التطبيق."
+            <cite>- اسم الطالب</cite>
           </blockquote>
           <blockquote class="card quote">
-            "الشرح بسيط وعملي، وكل نقطة ليها تطبيق فعلي واضح." 
-            <cite>- أحمد، فريلانسر تسويق</cite>
+            "Placeholder: انتقال حقيقي من التعلم النظري إلى تنفيذ حملات ناجحة."
+            <cite>- اسم الطالبة</cite>
           </blockquote>
           <blockquote class="card quote">
-            "أحسن حاجة المتابعة والدعم، حسيت إني مش لوحدي في الرحلة." 
-            <cite>- نور، طالبة تجارة</cite>
+            "Placeholder: دعم مستمر ومتابعة ساعدتني ألتزم وأطوّر مهارتي بسرعة."
+            <cite>- اسم الطالب</cite>
           </blockquote>
         </div>
       </div>
     </section>
 
     <section id="faq" class="section">
-      <div class="container">
+      <div class="container reveal">
         <h2>الأسئلة الشائعة</h2>
         <div class="faq-list">
           <details>
-            <summary>هل الكورس مناسب للمبتدئين؟</summary>
-            <p>أيوه، الكورس مصمم للي لسه بيبدأ وبيمشي معاك خطوة بخطوة.</p>
+            <summary>هل الكورسات مناسبة للمبتدئين؟</summary>
+            <p>نعم، كل مسار يبدأ بأساسيات واضحة ثم يتدرج لتطبيقات عملية متقدمة.</p>
           </details>
           <details>
-            <summary>هل في شهادة بعد الإكمال؟</summary>
-            <p>نعم، بيتم تقديم شهادة إتمام بعد إنهاء جميع متطلبات الكورس.</p>
+            <summary>كيف أسجّل في الأكاديمية؟</summary>
+            <p>من خلال أي زر تسجيل في الصفحة وسيتم تحويلك مباشرة إلى نموذج Google Form.</p>
           </details>
           <details>
-            <summary>هل في متابعة بعد الاشتراك؟</summary>
-            <p>في متابعة مستمرة من خلال جروب الدعم وجلسات أسئلة وأجوبة.</p>
+            <summary>هل يوجد دعم بعد التسجيل؟</summary>
+            <p>يوجد دعم مستمر للطلاب عبر المتابعة والإجابة على الأسئلة بشكل منتظم.</p>
           </details>
         </div>
       </div>
