@@ -53,7 +53,7 @@ body {
 img { max-width: 100%; display: block; }
 
 .container { width: min(1200px, 92%); margin: 0 auto; }
-.section { padding: 104px 0; }
+.section { padding: 96px 0; }
 .section-dark { background: linear-gradient(135deg, rgba(16, 16, 16, 0.9), rgba(8, 8, 8, 0.95)); }
 
 .gold-divider {
@@ -110,12 +110,14 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 .logo img {
-  height: clamp(72px, 9.5vw, 104px);
+  height: clamp(88px, 11.5vw, 126px);
   width: auto;
   object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
   filter: drop-shadow(0 12px 24px rgba(212, 175, 55, 0.36));
 }
 .nav-links {
@@ -312,33 +314,44 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   background: rgba(212, 175, 55, 0.08);
 }
 
-.social-block + .social-block { margin-top: 34px; }
-.social-subtitle { margin-bottom: 14px; }
+.social-block + .social-block { margin-top: 24px; }
+.social-subtitle { margin-bottom: 10px; }
 .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .social-card {
-  padding: 26px 22px 24px;
+  padding: 20px 18px;
   text-align: center;
-  background: linear-gradient(155deg, rgba(212, 175, 55, 0.14), rgba(16, 16, 16, 0.96));
-  border-color: rgba(241, 221, 149, 0.45);
+  background:
+    radial-gradient(circle at 16% 8%, rgba(212, 175, 55, 0.22), transparent 56%),
+    linear-gradient(160deg, #111111, #060606 70%);
+  border-color: rgba(212, 175, 55, 0.42);
+}
+.social-card:hover {
+  box-shadow: 0 0 0 1px rgba(241, 221, 149, 0.55), 0 22px 36px rgba(212, 175, 55, 0.22);
 }
 .icon {
   display: inline-grid;
   place-items: center;
-  width: 86px;
-  height: 86px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  margin-bottom: 14px;
-  background: radial-gradient(circle at 30% 30%, #f8e6af 0%, #d4af37 45%, #a77f1c 100%);
-  border: 2px solid rgba(241, 221, 149, 0.9);
-  box-shadow: 0 14px 28px rgba(212, 175, 55, 0.34), inset 0 2px 5px rgba(255, 255, 255, 0.35);
-  color: #0d0d0d;
-  font-size: 2.3rem;
-  font-weight: 900;
-  line-height: 1;
+  margin-bottom: 12px;
+  background: radial-gradient(circle at 30% 28%, #f3de9a 0%, #d4af37 52%, #8e6a16 100%);
+  border: 1.5px solid rgba(241, 221, 149, 0.92);
+  box-shadow: 0 10px 22px rgba(212, 175, 55, 0.28), inset 0 1px 3px rgba(255, 255, 255, 0.38);
+}
+.icon svg {
+  width: 34px;
+  height: 34px;
+  fill: #0e0e0e;
+}
+.icon-tiktok svg {
+  width: 33px;
+  height: 33px;
 }
 .social-card h4 {
   color: var(--gold-soft);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
+  font-size: 1.12rem;
 }
 
 .why-grid {
@@ -485,8 +498,8 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
 }
 
 @media (max-width: 680px) {
-  .section { padding: 74px 0; }
-  .logo img { height: 74px; }
+  .section { padding: 68px 0; }
+  .logo img { height: 90px; }
 
   .trust-badges,
   .courses-grid,
@@ -509,5 +522,16 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   .footer-inner {
     flex-direction: column;
     text-align: center;
+  }
+
+  .social-card { padding: 18px 16px; }
+  .icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+  }
+  .icon svg {
+    width: 30px;
+    height: 30px;
   }
 }
