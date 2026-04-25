@@ -440,16 +440,15 @@ p {
 .social-block + .social-block { margin-top: 40px; }
 .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 
-.social-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
 .social-card {
-  padding: 26px 22px;
+  padding: 28px 22px 22px;
   text-align: center;
-  min-height: 210px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
   background: linear-gradient(160deg, rgba(20, 20, 20, 0.96), rgba(10, 10, 10, 0.9));
 }
 .social-card h4 {
@@ -461,7 +460,7 @@ p {
   font-size: 0.95rem;
 }
 
-.social-card-link:hover .social-card {
+.social-card:hover {
   transform: translateY(-8px) scale(1.01);
   border-color: rgba(243, 227, 170, 0.95);
   box-shadow:
@@ -481,13 +480,28 @@ p {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.32);
 }
 .platform-icon svg {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   fill: var(--gold-soft);
 }
-.social-card-link:hover .platform-icon {
+.social-card:hover .platform-icon {
   box-shadow: 0 0 24px rgba(212, 175, 55, 0.45);
 }
+
+.social-btn {
+  margin-top: 6px;
+  width: 100%;
+  text-align: center;
+  color: #0e0e0e;
+  background: linear-gradient(180deg, #f0cf6f 0%, #c9972f 100%);
+  box-shadow: 0 8px 16px rgba(212, 175, 55, 0.28);
+}
+
+.social-facebook:hover { box-shadow: 0 0 30px rgba(24, 119, 242, 0.24), 0 20px 36px rgba(0, 0, 0, 0.44); }
+.social-instagram:hover { box-shadow: 0 0 30px rgba(225, 48, 108, 0.26), 0 20px 36px rgba(0, 0, 0, 0.44); }
+.social-tiktok:hover { box-shadow: 0 0 30px rgba(37, 244, 238, 0.24), 0 20px 36px rgba(0, 0, 0, 0.44); }
+.social-telegram:hover { box-shadow: 0 0 30px rgba(34, 158, 217, 0.24), 0 20px 36px rgba(0, 0, 0, 0.44); }
+.social-whatsapp:hover { box-shadow: 0 0 30px rgba(37, 211, 102, 0.24), 0 20px 36px rgba(0, 0, 0, 0.44); }
 
 .why-grid {
   display: grid;
@@ -675,6 +689,6 @@ p {
 
   .social-card {
     min-height: 0;
-    padding: 22px 18px;
+    padding: 24px 18px 18px;
   }
 }
