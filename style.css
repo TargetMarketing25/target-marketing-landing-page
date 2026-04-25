@@ -1156,67 +1156,44 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   }
 
   .future-orbit {
-    --orbit-scale: 1;
-    width: min(96vw, 430px);
-    min-height: auto;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-    align-items: start;
-  }
-
-  .orbit-line-1 {
-    display: none;
-  }
-
-  .orbit-line-2,
-  .light-trace-1,
-  .light-trace-2 {
-    display: none;
-  }
-
-  .particle-layer {
-    display: none;
+    --orbit-scale: 0.52;
+    width: min(95vw, 390px);
+    min-height: clamp(340px, 98vw, 410px);
   }
 
   .center-frame {
-    width: 118px;
-    height: 118px;
-    padding: 14px;
-    margin: 0 auto 4px;
-    grid-column: 1 / -1;
+    width: clamp(96px, 24vw, 112px);
+    height: clamp(96px, 24vw, 112px);
+    padding: 12px;
+  }
+
+  .center-frame::before {
+    inset: -10px;
   }
 
   .orbit-item {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none !important;
-    animation: none;
+    animation-duration: 15s;
   }
 
   .orbit-item-inner {
-    width: 100%;
-    justify-content: center;
     gap: 5px;
-    padding: 7px 8px;
-    border-radius: 12px;
-    transform: none;
-    animation: none;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.34), 0 0 12px rgba(212, 175, 55, 0.12);
+    padding: 6px 9px;
+    border-radius: 999px;
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.38), 0 0 14px rgba(212, 175, 55, 0.18);
   }
 
   .orbit-item-inner:hover {
-    transform: translateY(-1px);
+    transform: rotate(calc(var(--angle) * -1deg)) translateY(-1px);
   }
 
   .item-icon {
-    width: 20px;
-    height: 20px;
-    font-size: 0.76rem;
+    width: 18px;
+    height: 18px;
+    font-size: 0.68rem;
   }
 
   .item-label {
-    font-size: 0.63rem;
+    font-size: 0.62rem;
   }
 
   .hero-content h1 {
