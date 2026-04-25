@@ -480,8 +480,8 @@ p {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.32);
 }
 .platform-icon svg {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   fill: var(--gold-soft);
   display: block;
 }
