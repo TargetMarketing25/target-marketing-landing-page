@@ -641,6 +641,61 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   color: #e1dbc9;
   line-height: 1.8;
 }
+.course-card--trading {
+  gap: 12px;
+}
+.course-card--trading .course-intro {
+  margin-bottom: 0;
+}
+.trading-benefits {
+  display: grid;
+  gap: 10px;
+}
+.trading-benefit-block {
+  padding: 10px 11px;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  background: linear-gradient(145deg, rgba(212, 175, 55, 0.11), rgba(10, 10, 10, 0.9));
+}
+.trading-benefit-block h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  color: #f2e2b0;
+  font-size: 0.98rem;
+}
+.trading-mini-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(170deg, rgba(255, 234, 172, 0.82), rgba(212, 175, 55, 0.38));
+  border: 1px solid rgba(241, 221, 149, 0.58);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.24), 0 6px 14px rgba(212, 175, 55, 0.16);
+  font-size: 0.9rem;
+}
+.trading-benefit-block ul {
+  margin: 0;
+  padding: 0 18px 0 0;
+  display: grid;
+  gap: 4px;
+}
+.trading-benefit-block li {
+  color: #ddd6bf;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+.trading-highlight {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(241, 221, 149, 0.46);
+  background: rgba(212, 175, 55, 0.1);
+  color: #f4e9c8 !important;
+  font-size: 0.93rem;
+  line-height: 1.85;
+}
 .course-tag {
   display: inline-block;
   margin-top: auto;
