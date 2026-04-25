@@ -72,27 +72,90 @@ if (slider && dotsWrap) {
 const faqItems = Array.from(document.querySelectorAll(".faq-item"));
 
 if (faqItems.length) {
+  let faqIdCounter = 0;
+
+  const closeItem = (item) => {
+    const button = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+    if (!button || !answer) return;
+
+    button.setAttribute("aria-expanded", "false");
+    item.classList.remove("open");
+
+    const startHeight = `${answer.scrollHeight}px`;
+    answer.style.maxHeight = startHeight;
+
+    requestAnimationFrame(() => {
+      answer.style.maxHeight = "0px";
+    });
+
+    const onCloseEnd = (event) => {
+      if (event.propertyName !== "max-height") return;
+      answer.hidden = true;
+      answer.removeEventListener("transitionend", onCloseEnd);
+    };
+
+    answer.addEventListener("transitionend", onCloseEnd);
+  };
+
+  const openItem = (item) => {
+    const button = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+    if (!button || !answer) return;
+
+    answer.hidden = false;
+    answer.style.maxHeight = "0px";
+
+    requestAnimationFrame(() => {
+      item.classList.add("open");
+      button.setAttribute("aria-expanded", "true");
+      answer.style.maxHeight = `${answer.scrollHeight}px`;
+    });
+
+    const onOpenEnd = (event) => {
+      if (event.propertyName !== "max-height") return;
+      if (item.classList.contains("open")) {
+        answer.style.maxHeight = "none";
+      }
+      answer.removeEventListener("transitionend", onOpenEnd);
+    };
+
+    answer.addEventListener("transitionend", onOpenEnd);
+  };
+
   faqItems.forEach((item) => {
     const button = item.querySelector(".faq-question");
     const answer = item.querySelector(".faq-answer");
     if (!button || !answer) return;
 
+    faqIdCounter += 1;
+    const answerId = `faq-answer-${faqIdCounter}`;
+    answer.id = answerId;
+    button.setAttribute("aria-controls", answerId);
+
     button.addEventListener("click", () => {
       const isOpen = item.classList.contains("open");
 
       faqItems.forEach((otherItem) => {
-        const otherButton = otherItem.querySelector(".faq-question");
-        const otherAnswer = otherItem.querySelector(".faq-answer");
-        otherItem.classList.remove("open");
-        if (otherButton) otherButton.setAttribute("aria-expanded", "false");
-        if (otherAnswer) otherAnswer.hidden = true;
+        if (otherItem !== item && otherItem.classList.contains("open")) {
+          closeItem(otherItem);
+        }
       });
 
-      if (!isOpen) {
-        item.classList.add("open");
-        button.setAttribute("aria-expanded", "true");
-        answer.hidden = false;
+      if (isOpen) {
+        closeItem(item);
+      } else {
+        openItem(item);
       }
     });
+
+    if (window.PointerEvent) {
+      button.addEventListener("pointerup", (event) => {
+        if (event.pointerType === "touch") {
+          event.preventDefault();
+          button.click();
+        }
+      });
+    }
   });
 }
