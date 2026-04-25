@@ -471,22 +471,20 @@ p {
 .platform-icon {
   display: inline-grid;
   place-items: center;
-  width: 62px;
-  height: 62px;
+  width: 78px;
+  height: 78px;
   border-radius: 50%;
-  margin-bottom: 12px;
-  border: 1px solid rgba(243, 227, 170, 0.35);
-  background: radial-gradient(circle at 30% 30%, rgba(243, 227, 170, 0.28), rgba(212, 175, 55, 0.12));
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.32);
+  margin-bottom: 14px;
+  border: 1px solid rgba(243, 227, 170, 0.48);
+  background: radial-gradient(circle at 30% 30%, rgba(243, 227, 170, 0.36), rgba(212, 175, 55, 0.16));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.34);
 }
-.platform-icon svg {
-  width: 44px;
-  height: 44px;
-  fill: var(--gold-soft);
-  display: block;
-}
-.platform-svg {
-  filter: drop-shadow(0 0 8px rgba(243, 227, 170, 0.28));
+.platform-letter {
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff9e4;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.45);
 }
 .social-card:hover .platform-icon {
   box-shadow: 0 0 24px rgba(212, 175, 55, 0.45);
