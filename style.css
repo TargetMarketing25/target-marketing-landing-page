@@ -113,7 +113,7 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   padding: 10px 0;
 }
 .logo img {
-  height: clamp(72px, 9.5vw, 104px);
+  height: clamp(90px, 11.9vw, 130px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 12px 24px rgba(212, 175, 55, 0.36));
@@ -312,23 +312,44 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   background: rgba(212, 175, 55, 0.08);
 }
 
-.social-block + .social-block { margin-top: 34px; }
-.social-subtitle { margin-bottom: 14px; }
-.social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.social-block + .social-block { margin-top: 26px; }
+.social-subtitle { margin-bottom: 10px; }
+.social-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
 .social-card {
-  padding: 22px;
+  padding: 20px 18px 18px;
   text-align: center;
+  background: linear-gradient(155deg, rgba(212, 175, 55, 0.14), rgba(16, 16, 16, 0.96));
+  border-color: rgba(241, 221, 149, 0.45);
 }
 .icon {
   display: inline-grid;
   place-items: center;
-  width: 52px;
-  height: 52px;
+  width: 69px;
+  height: 69px;
   border-radius: 50%;
+  margin-bottom: 12px;
+  background: radial-gradient(circle at 30% 30%, #f8e6af 0%, #d4af37 45%, #a77f1c 100%);
+  border: 2px solid rgba(241, 221, 149, 0.9);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.28), inset 0 2px 5px rgba(255, 255, 255, 0.35);
+  color: #0d0d0d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+.icon svg {
+  width: 62%;
+  height: 62%;
+  fill: currentColor;
+}
+.social-card h4 {
+  color: var(--gold-soft);
   margin-bottom: 10px;
-  background: rgba(212, 175, 55, 0.16);
-  border: 1px solid var(--border);
-  font-size: 1.25rem;
+}
+.social-card:hover .icon {
+  transform: translateY(-1px) scale(1.06);
+  box-shadow: 0 0 0 2px rgba(241, 221, 149, 0.5), 0 0 22px rgba(241, 221, 149, 0.55), 0 12px 26px rgba(212, 175, 55, 0.36);
+  filter: saturate(1.06);
 }
 
 .why-grid {
@@ -460,7 +481,7 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   .nav-links {
     display: none;
     position: absolute;
-    top: 96px;
+    top: 116px;
     right: 4%;
     width: min(310px, 92%);
     background: #101010;
@@ -476,7 +497,7 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
 
 @media (max-width: 680px) {
   .section { padding: 74px 0; }
-  .logo img { height: 74px; }
+  .logo img { height: 93px; }
 
   .trust-badges,
   .courses-grid,
@@ -489,6 +510,13 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   }
 
   .testimonial-slider { min-height: 230px; }
+
+  .social-grid { gap: 10px; }
+  .social-card { padding: 18px 14px 16px; }
+  .icon {
+    width: 62px;
+    height: 62px;
+  }
 
   .hero-cta .btn,
   .center-cta .btn {
