@@ -809,14 +809,14 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 .footer-logos img {
-  width: 50px;
-  height: 50px;
+  max-height: 38px;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 3px 9px rgba(212, 175, 55, 0.18));
 }
 
 .reveal {
@@ -932,6 +932,14 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
 
   .footer-inner {
     gap: 9px;
+  }
+
+  .footer-logos {
+    gap: 14px;
+  }
+
+  .footer-logos img {
+    max-height: 30px;
   }
 
   .social-card { padding: 18px 16px; }
