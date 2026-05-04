@@ -715,6 +715,43 @@ p { color: var(--muted); line-height: 1.9; margin: 0 0 12px; }
   box-shadow: 0 0 0 1px rgba(241, 221, 149, 0.32), 0 24px 36px rgba(212, 175, 55, 0.24);
 }
 
+.presentation-card {
+  padding: clamp(24px, 3.2vw, 34px);
+  text-align: center;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(212, 175, 55, 0.24), transparent 40%),
+    radial-gradient(circle at 88% 82%, rgba(212, 175, 55, 0.14), transparent 38%),
+    linear-gradient(154deg, rgba(212, 175, 55, 0.17), rgba(8, 8, 8, 0.98) 58%);
+  border: 1px solid rgba(241, 221, 149, 0.48);
+  box-shadow: 0 0 0 1px rgba(241, 221, 149, 0.16), 0 24px 44px rgba(0, 0, 0, 0.48);
+}
+.presentation-card h2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.presentation-card p {
+  margin: 0 auto;
+  max-width: 78ch;
+  color: #ece5d1;
+  font-size: clamp(1rem, 1.45vw, 1.1rem);
+}
+.presentation-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(170deg, rgba(255, 234, 172, 0.88), rgba(212, 175, 55, 0.38));
+  border: 1px solid rgba(241, 221, 149, 0.64);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.28), 0 8px 16px rgba(212, 175, 55, 0.2);
+}
+.presentation-card .center-cta {
+  margin-top: 18px;
+}
+
 .social-block + .social-block { margin-top: 24px; }
 .social-subtitle { margin-bottom: 10px; }
 .social-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
